@@ -1,0 +1,26 @@
+#days {
+    margin: 20px;
+    padding: 20px;
+}
+
+.day-btn {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#workout-list {
+    margin: 20px;
+    padding: 20px;
+}
+
+.workout-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.workout-item img {
+    margin-right: 10px;
+    border-radius: 5px; /* Optional: rounds the corners of the images */
+}

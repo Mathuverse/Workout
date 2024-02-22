@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weekly Workout Planner</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1 style="text-align: center;">What to do Today</h1>
+    <div id="days">
+        <button class="day-btn" onclick="showWorkouts('sunday')">Sunday</button>
+        <button class="day-btn" onclick="showWorkouts('monday')">Monday</button>
+        <button class="day-btn" onclick="showWorkouts('tuesday')">Tuesday</button>
+        <button class="day-btn" onclick="showWorkouts('wednesday')">Wednesday</button>
+        <button class="day-btn" onclick="showWorkouts('thursday')">Thursday</button>
+        <button class="day-btn" onclick="showWorkouts('friday')">Friday</button>
+        <button class="day-btn" onclick="showWorkouts('saturday')">Saturday</button>
+    </div>
+    <div id="workout-list"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
