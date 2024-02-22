@@ -1,9 +1,11 @@
 #days {
     margin: 20px;
     padding: 20px;
+    display: flex;
 }
 
 .day-btn {
+    flex-grow: 1;
     margin: 5px;
     padding: 10px;
     cursor: pointer;
