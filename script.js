@@ -52,17 +52,21 @@ const workouts = {
 function showWorkouts(day) {
     const workoutList = document.getElementById('workout-list');
     workoutList.innerHTML = ''; // Clear previous workouts
-    workouts[day].forEach((workout, index) => {
-        const checkboxId = `${day}-workout-${index}`;
-        workoutList.innerHTML += `
-            <div class="workout-item">
-                <img src="${workout.img}" alt="${workout.name}" style="width:100px; height:auto;">
-                <div>
-                    <input type="checkbox" id="${checkboxId}" /> 
-                    <label for="${checkboxId}">${workout.name}, ${workout.d}</label>
-                </div>
+    const listGroup = document.createElement('div');
+    listGroup.className = 'list-group';
+    workouts[day].forEach(workout => {
+        const workoutItem = document.createElement('a');
+        workoutItem.className = 'list-group-item list-group-item-action flex-column align-items-start';
+        workoutItem.innerHTML = `
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">${workout.name}</h5>
             </div>
+            <p class="mb-1">${workout.d}</p>
+            <small>Click for details.</small>
+            <img src="${workout.img}" class="img-fluid mt-2" alt="${workout.name}">
         `;
+        listGroup.appendChild(workoutItem);
     });
+    workoutList.appendChild(listGroup);
 }
 
