@@ -23,6 +23,113 @@
 }
 
 .workout-item img {
-    margin-right: 10px;
-    border-radius: 5px; /* Optional: rounds the corners of the images */
+    max-width: 100%; /* Make images responsive */
+    height: auto;
+    margin-right: 10px; /* Keep the right margin for larger screens */
+    border-radius: 5px;
+}
+
+
+@media (max-width: 768px) {
+    #days {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .day-btn {
+        margin: 2px 0; /* Reduce margin for smaller screens */
+        padding: 8px; /* Slightly reduce padding */
+    }
+
+    #workout-list {
+        padding: 10px;
+    }
+
+    .workout-item {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start on smaller screens */
+    }
+
+    .workout-item img {
+        margin-bottom: 10px; /* Add bottom margin when stacked */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust base font size for smaller screens */
+    }
+
+    h1 {
+        font-size: 20px; /* Adjust heading font size for better readability */
+    }
+}
+
+@media (max-width: 768px) {
+    .day-btn {
+        padding: 12px 0; /* Increase padding to create larger touch targets */
+    }
+}
+h1 {
+    font-family: 'Lobster', cursive; /* Apply the font */
+}
+
+/* Dark theme styles */
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+h1 {
+    color: #ffffff;
+}
+
+.day-btn, .btn {
+    background-color: #333333; /* Darker buttons */
+    color: #ffffff;
+    border: none;
+}
+
+.day-btn:hover, .btn:hover {
+    background-color: #555555; /* Lighter on hover */
+}
+
+#workout-list {
+    background-color: #242424; /* Slightly lighter than body for contrast */
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px; /* Optional: adds rounded corners */
+}
+
+.workout-item {
+    background-color: #333333; /* Dark background for each item */
+    color: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners for workout items */
+}
+
+.workout-item img {
+    border-radius: 5px; /* Keep rounded corners for images */
+}
+
+/* Bootstrap overrides for dark theme */
+.btn-primary, .btn-outline-primary {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-primary:hover, .btn-outline-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Ensuring text remains visible against the dark backgrounds */
+.btn-outline-primary {
+    color: #ffffff;
+}
+
+.btn-outline-primary:hover {
+    color: #000000;
 }
